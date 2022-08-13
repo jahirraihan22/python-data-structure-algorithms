@@ -93,6 +93,18 @@ class LinkedList:
             itr = itr.next
             count += 1
 
+    def insert_after_value(self, data_after, data_to_insert):
+        pass
+    # Search for first occurrence of data_after value in linked list
+    # Now insert data_to_insert after data_after node
+
+    def remove_by_value(self, data):
+        pass
+        # Remove first node that contains data
+
+
+
+    # utility functions 
     def print(self):
         if self.head is None:
             print("List is empty")
@@ -107,6 +119,21 @@ class LinkedList:
 
         print(link_list)
 
+"""
+    def is_value_present(self, data):
+        count = 0
+        itr = self.head
+
+        if itr.head == data:
+            return true
+
+        while itr:
+            node = Node(data, itr.next)
+            itr.next = node
+
+            itr = itr.next
+            count += 1
+"""
 if __name__ == '__main__':
     link_list = LinkedList()
     link_list.insert_values([2,54,23,43,45,32])
