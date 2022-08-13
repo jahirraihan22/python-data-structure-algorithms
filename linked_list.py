@@ -74,6 +74,25 @@ class LinkedList:
             itr = itr.next
             count += 1
 
+    def update_at(self, index, data):
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid index")
+        
+        if index == 0:
+            self.insert_at_begin(data)
+            return
+
+        count = 0
+        itr = self.head
+
+        while itr:
+            if count == index - 1:
+                self.insert_at(count,data)
+                break
+
+            itr = itr.next
+            count += 1
+
     def print(self):
         if self.head is None:
             print("List is empty")
@@ -94,5 +113,6 @@ if __name__ == '__main__':
     # print("Length: ",link_list.get_length())
     # link_list.remove_at(1)
     link_list.print()
-    link_list.insert_at(3,"BD08")
+    # link_list.insert_at(5,"BD08")
+    link_list.update_at(3,"BD08")
     link_list.print()
